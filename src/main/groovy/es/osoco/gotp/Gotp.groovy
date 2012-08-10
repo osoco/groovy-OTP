@@ -151,18 +151,5 @@ class Gotp
         }
         return result
     }
-    public static void main(String[] args) {
-
-        def String seed = "3132333435363738393031323334353637383930"
-        def TOKEN_SHARED_SECRET = '12345678901234567890'
-
-        DatatypeConverter.printHexBinary(TOKEN_SHARED_SECRET as byte []);
-
-
-        println("!!!!!!"+seed)
-        println("??????"+DatatypeConverter.printHexBinary(TOKEN_SHARED_SECRET as byte[]))
-
-    }
-
 }
 
