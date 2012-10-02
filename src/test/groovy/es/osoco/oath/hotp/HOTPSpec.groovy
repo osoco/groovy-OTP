@@ -19,11 +19,10 @@
  * Copyright 2012 OSOCO. All Rights Reserved.
  *
  */
-package es.osoco.oath.htop
+package es.osoco.oath.hotp
 
 import spock.lang.Specification
 import spock.lang.Unroll
-import es.osoco.oath.hotp.OneTimePasswordAlgorithm
 
 class HOTPSpec extends Specification
 {
@@ -42,7 +41,7 @@ class HOTPSpec extends Specification
         def hexSecretKey = hexStr2Bytes(sharedSecret)
 
         expect:
-        hotp == OneTimePasswordAlgorithm.generateOTP( hexSecretKey, count, codeDigits, false)
+        hotp == es.osoco.oath.hotp.OneTimePasswordAlgorithm.generateOTP( hexSecretKey, count, codeDigits, false)
 
         where:
         count | hotp
